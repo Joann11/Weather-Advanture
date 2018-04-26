@@ -1,0 +1,22 @@
+ .blink_img{
+    background-image: url("Cloud.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+ 
+
+#background{
+  background-image: url("Cloud.jpg");
+  animation: blinker 0.5s linear infinite;
+  }
+  @keyframes blinker { 
+    50% { opacity: 0; }
+  }
+  @keyframes blin { 
+    50% { opacity: 0; }
+  }

@@ -1,0 +1,73 @@
+div.c {
+    /*border-style: dotted;
+    border-color: black;*/
+    background: url("https://blaiprat.github.io/jquery.animateSprite/img/scottpilgrim_multiple.png");
+    width: 108px;
+    height: 140px;
+    animation: x2 1.5s steps(8) infinite, y2 3s steps(2) infinite;
+  }
+  
+  @keyframes x2 {
+    0% {
+      background-position-x: 0px;
+    }
+    50% {
+      background-position-x: -864px;
+      /*transform: translatex(508px);*/
+    }
+    100% {
+      background-position-x: 0px;
+      transform: translatex(0px);
+    }
+  }
+  
+  @keyframes y2 {
+    0% {
+      background-position-y: 0px;
+    }
+    50% {
+      background-position-y: -280px;
+    }
+  }
+
+  div.u {
+    /*border-style: dotted;
+    border-color: black;*/
+    background: url("uni2.1.png");
+    width: 208px;
+    height: 110px;
+  animation: walk-east 0.3s steps(9) infinite, forward 5s linear infinite ;
+  }
+  
+  @keyframes walk-east {
+   from {background-position: 0px;}
+  to { background-position: 1875px;}
+
+  }
+  
+@keyframes forward{
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        /*typical computer screen is up till 1200px*/
+        transform: translateX(1500px);
+    }
+}
+
+
+
+.jump {
+   
+    background: url("uni2.2.png");
+    width: 183px;
+    height: 130px;
+  animation: jumpup 0.3s steps(11) infinite ;
+  }
+  
+  @keyframes jumpup {
+   from {background-position: 0px;}
+  to { background-position: 2015px;}
+
+  }
+  

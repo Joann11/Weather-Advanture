@@ -1,0 +1,15 @@
+
+body{
+    background-image: url("sky.jpg");
+    background-repeat: no-repeat;
+    width: 90%;
+    height:90%;
+    background-position: center;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
