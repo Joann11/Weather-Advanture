@@ -2,15 +2,19 @@ function processForm()
 { 
   var parameters = location.search.substring(1).split("&");
   var temp = parameters[0].split("=");
-  console.log();
+  return temp[1].replace(/\+/g, ' ');
+  console.log(temp[1]);
+ 
 
 }
 processForm();
 
+function getUserName(){
+    return processForm();
+}
 
 $(function() {
   var results = [];
-
   function getDataFromAPI(location) {
 
     results.length = 0;
@@ -34,6 +38,8 @@ function(data) {
 
 
   function display_weather(weatherArray){
+
+    $("#name").html(processForm())
     console.log("data!",weatherArray);
     //$("#name").html(weatherArray[0].name);
     $("#temperature").html(weatherArray[1].temp_c +"C");

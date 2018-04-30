@@ -4,6 +4,7 @@
      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
      crossorigin="anonymous"></head>
 <body>
+    <audio src="castle.mp3" autoplay loop></audio>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -17,12 +18,13 @@
 
     </div>
     <p>
-        <h2>Hello! Welcome to Weather Adventure! You're in St Andrews right now and here is the weather condition! So be prepared!! </h2>
 
-    
+ <div class="container">
+      <div class="row">
+      <div class="col-md-12">
+    <div class="data">
    <p class="weather_data"></p>
-<!-- <u>Name of place:</u> 
-   <h1 id="name"></h1> -->
+   <h2>Hello <span id="name"></span>! Welcome to Weather Adventure! You're in <span id=stAndrews>St Andrews</span> right now and here is the weather condition! So be prepared!! </h2>
     <h4>Temperature:</h4>
 <h1 id="temperature"></h1>
   <h4>Humidity:</h4>
@@ -33,7 +35,9 @@
 <h1 id="feelslike"></h1>
 <h4>Condition:</h4>
 <h1 id="condition"></h1>
+
 </p>
+</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

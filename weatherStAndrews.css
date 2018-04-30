@@ -1,6 +1,6 @@
 
 body{
-    background-image: url("sky.jpg");
+    background-image: url("sunshine.jpg");
     background-repeat: no-repeat;
     width: 90%;
     height:90%;
@@ -13,3 +13,34 @@ body{
  -o-background-size: cover;
  background-size: cover;
 }
+h2 {
+    color: white;
+    animation: blinker 1s linear infinite;
+    animation: color-change 1s infinite;
+
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes color-change{
+      from {color:white;}
+      to{color:black;}
+  }
+
+  
+
+  .data{
+      color:white;
+
+  }
+
+  #stAndrews{
+      font-size: 60px;
+      font-family: fantasy;
+    
+
+  }

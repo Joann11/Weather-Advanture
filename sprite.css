@@ -57,7 +57,7 @@ div.c {
 
 
 
-.jump {
+div.jump {
    
     background: url("uni2.2.png");
     width: 183px;
@@ -65,9 +65,8 @@ div.c {
   animation: jumpup 0.3s steps(11) infinite ;
   }
   
-  @keyframes jumpup {
+ @keyframes jumpup {
    from {background-position: 0px;}
-  to { background-position: 2015px;}
-
+  to {background-position: 2015px;}
   }
   
