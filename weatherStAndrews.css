@@ -1,46 +1,84 @@
-
-body{
-    background-image: url("sunshine.jpg");
-    background-repeat: no-repeat;
-    width: 90%;
-    height:90%;
-    background-position: center;
-    text-align:center;
-    margin:auto;
-    padding:0;
-    -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
+body {
+  /*background-image: url("sky.jpg");*/
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 90%;
+  background-position: center;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  background-size: cover;
 }
-h2 {
-    color: white;
-    animation: blinker 1s linear infinite;
-    animation: color-change 1s infinite;
+span {
+  font-size: 50px;
+  animation: blinker 1s linear infinite;
+  animation: color-change 1s infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(251, 251, 253);
+  }
+  50% {
+    color: rgb(255, 51, 177);
+  }
+  100% {
+    color: rgb(157, 47, 221);
+  }
+}
+
+.data {
+  color: white;
+  font-family: playfair display sc;
+}
+
+/*  div.u {
+    /*border-style: dotted;
+    border-color: black;*/
+/*    background: url("uni2.1.png");
+    position: absolute;
+    top: 600px;
+    width: 208px;
+    height: 110px;
+  animation: walk-east 0.3s steps(9) infinite, forward 5s linear infinite ;
+  }
+  /*from 0px to 1855px bcos the width porperty of the unicorn sprite image is 1855px*/
+/*  @keyframes walk-east {
+   from {background-position: 0px;}
+  to { background-position: 1855px;}
 
   }
   
-  @keyframes blinker {
-    50% {
-      opacity: 0;
+
+  @keyframes forward{
+    0% {
+        transform: translateX(-100px);
     }
-  }
+    100% {
+        /*typical computer screen is up till 1200px*/
+/*  transform: translateX(1200px);
+    }
+}*/
+#button {
+  background-color: rgba(255, 255, 255, 0.432);
+  color: rgb(255, 255, 255);
+}
+h1 {
+  padding: 5px;
+}
+#button:hover {
+  background-color: rgb(252, 1, 126);
+  font-size: 30px;
+}
 
-  @keyframes color-change{
-      from {color:white;}
-      to{color:black;}
-  }
-
-  
-
-  .data{
-      color:white;
-
-  }
-
-  #stAndrews{
-      font-size: 60px;
-      font-family: fantasy;
-    
-
-  }
+h1:hover {
+  font-family: fantasy;
+  color: white;
+  font-size: 60px;
+}

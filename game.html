@@ -1,17 +1,40 @@
 <html>
-    <head>
-            <link rel= "stylesheet" type="text/css" href="game.css">
-            <script src="game.js"></script>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-          </head>
-    <body>    
-      <div id="runner"></div>
-      <div id="road"></div>
- </body>
- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
- crossorigin="anonymous"></script>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="game.css">
+  <script src="game.js"></script>
+  <script src="jump.js"></script>
+</head>
+
+<body>
+
+  <div class="restart">
+    <a href="game.html" id="restart_button" class="btn btn-info dark btn-sm"> RESTART! </a>
+  </div>
+
+  <p>Score:
+    <span id="result"></span>
+  </p>
+  <div class="container">
+    <div id="my_canvas">
+      <div class="run"></div>
+      <div class="jump"></div>
+      <div class="dragon"></div>
+      <div class="bird"></div>
+      <div class="dragon2"></div>
+      <div class="bird2"></div>
+
+    </div>
+  </div>
+</body>
+
 </html>

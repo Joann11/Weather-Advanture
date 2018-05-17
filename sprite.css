@@ -30,7 +30,7 @@ div.c {
     }
   }
 
-  div.u {
+  div#u {
     /*border-style: dotted;
     border-color: black;*/
     background: url("uni2.1.png");
@@ -57,16 +57,41 @@ div.c {
 
 
 
-div.jump {
+div#jump {
    
-    background: url("uni2.2.png");
-    width: 183px;
-    height: 130px;
-  animation: jumpup 0.3s steps(11) infinite ;
+    background: url("jumping.png");
+    width: 200px;
+    height: 140px;
+  animation: jumpup 0.5s steps(4) infinite;
   }
   
- @keyframes jumpup {
+ @keyframes jumpup{
    from {background-position: 0px;}
-  to {background-position: 2015px;}
+  to {background-position: 800px;}
   }
   
+
+ 
+
+div#dragon {
+   
+  background: url("dra.png");
+  width: 100px;
+  height: 70px;
+animation: walk 0.3s steps(3) infinite, walking 5s linear infinite ;
+}
+
+@keyframes walk{
+ from {background-position: 0px;}
+to {background-position: 300px;}
+}
+
+@keyframes walking{
+  0% {
+      transform: translateX(1500px);
+  }
+  100% {
+      /*typical computer screen is up till 1200px*/
+      transform: translateX(-50px);
+  }
+}

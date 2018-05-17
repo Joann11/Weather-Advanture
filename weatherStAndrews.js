@@ -2,7 +2,7 @@ function processForm()
 { 
   var parameters = location.search.substring(1).split("&");
   var temp = parameters[0].split("=");
-  return temp[1].replace(/\+/g, ' ');
+  return temp[1].replace(/\+/, ' ');
   console.log(temp[1]);
  
 
@@ -40,43 +40,42 @@ function(data) {
   function display_weather(weatherArray){
 
     $("#name").html(processForm())
-    console.log("data!",weatherArray);
-    //$("#name").html(weatherArray[0].name);
     $("#temperature").html(weatherArray[1].temp_c +"C");
     $("#feelslike").html(weatherArray[1].feelslike_c + "C");
     $("#wind").html(weatherArray[1].wind_kph + " kph");
     $("#humidity").html(weatherArray[1].humidity);
     $("#condition").html(weatherArray[1].condition.text);
-    //display_condition();
+    //target the output text of condition
+    var condition= $("#condition").text();
+    console.log("Condition is "+ condition);
+     //OMG I MADE IT WORK!!
+     // the color of the font so user can see clearly
+     
+    
+    function display_condition(){
+
+      if(condition === "Overcast" || condition === "Cloudy"|| condition === "Partly cloudy") {
+          $("body").css("background-image", "url(sky22.jpg)");
+         $(".data").css("color", "black");
+      }
+       else if(condition === "Heavy rain" || condition === "Light rain" || condition === "Moderate rain"){
+         $("body").css("background-image", "url(rain.jpg)");
+       }
+       else if(condition === "Sunny"|| condition === "Clear" ){
+        $("body").css("background-image", "url(sunshine.jpg)");
+        $(".data").css("color", "black");
+       }
+       else if(condition === "Heavy snow" || condition === "Light snow showers" || condition === "Moderate snow"){
+        $("body").css("background-image", "url(snow.jpg)");
+        $(".data").css("color", "black");
+       }
+      else{
+        $("body").css("background-image", "url(sky.jpg)"); 
+      }
+    }
+    display_condition();
   }
-      
-//function display_condition(){
-  //console.log($("#condition").val());
-    //if ($("#condition").val() == "Partly cloudy"||$("#condition").val() == "Overcast"|| $("#condition").val() == "Cloudy"){
-      // var condition_result = "#condition.css"
-      //console.log('ok');
-    //}
-    //else if ("#condition" == " Heavy rain" || "Light rain"){
-    //console.log( " " );
-    //}
-    //else if ("#condition" == "Sunny"|| "Clear"){
-    //console.log( "hii" );
-  //}
-    //else if ("#condition" == "Heavy snow" || "Light snow showers" || "Moderate snow"){
-    //console.log( "smile" );
-  //}
-    //else {
-    //console.log( "hi" );
-  //}
-   
-//}
 
-
-
- //$("button").click(function(){
-
-   // the val will print out name of the place because nof is the id of the input
    getDataFromAPI($("#nameOfPlace").val());
 
-// });
 });
